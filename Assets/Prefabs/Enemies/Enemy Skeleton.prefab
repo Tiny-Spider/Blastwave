@@ -973,7 +973,6 @@ GameObject:
   - 136: {fileID: 13689170}
   - 195: {fileID: 19551362}
   - 114: {fileID: 11488274}
-  - 114: {fileID: 11420596}
   m_Layer: 10
   m_Name: Enemy Skeleton
   m_TagString: Untagged
@@ -2319,19 +2318,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11420596
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e78579ed7b1c648a830a70cfb725e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 11445960, guid: 4e9b50f81fd8aed468ab2edcce3f8b68, type: 2}
 --- !u!114 &11488274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2344,11 +2330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  health: 5
-  maxHealth: 5
-  names:
-    displayName: Skeleton
-    techName: skeleton
   stateUpdateSpeed: 0.1
   lookSmoothing: 10
   animator: {fileID: 9558840}

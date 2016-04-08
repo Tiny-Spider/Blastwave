@@ -77,6 +77,10 @@ public class MenuUtil : MonoBehaviour {
     }
 
     public void Exit() {
+#if UNITY_EDITOR
+        Debug.Break();
+#else
         Application.Quit();
+#endif
     }
 }

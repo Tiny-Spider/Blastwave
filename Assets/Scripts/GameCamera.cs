@@ -43,7 +43,7 @@ public class GameCamera : MonoBehaviour {
             int numPoints = 0;
 
             foreach (LivingEntity livingEntity in targetEntities) {
-                if (livingEntity && livingEntity.gameObject.activeInHierarchy && !livingEntity.IsDead()) {
+                if (livingEntity && livingEntity.gameObject.activeInHierarchy && !livingEntity.dead) {
                     targetPosition += livingEntity.transform.position;
                     numPoints++;
                 }

@@ -61,26 +61,26 @@ public class Gun : Weapon {
         if (CheckCooldown()) {
             // Skip whole magazine stuff if the the size is set to infinite (-1)
             if (magazineSize <= 0) {
-                Shoot();
+                Shoot(attacker);
                 return;
             }
             
             // Magazine code
             if (magazine > 0) {
                 magazine--;
-                Shoot();
+                Shoot(attacker);
             } else {
                 Reload();
             }
         }
     }
 
-    public void Shoot() {
+    public void Shoot(LivingEntity attacker) {
         StartCoroutine(MuzzleFlash());
 
         if (projectile) {
             Projectile newProjectile = projectile.Spawn(muzzle.position, muzzle.rotation);
-            newProjectile.Initalize(damage, range, targetMask);
+            newProjectile.Initalize(attacker, damage, range, targetMask);
             return;
         }
 
@@ -90,7 +90,7 @@ public class Gun : Weapon {
             IDamageable damageable = hit.collider.GetComponent<IDamageable>();
 
             if (damageable != null) {
-                damageable.Damage(damage, hit.point, transform.forward);
+                damageable.Damage(attacker, damage, hit.point, transform.forward);
             }
         }
 

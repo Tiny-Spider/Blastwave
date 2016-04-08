@@ -20,7 +20,7 @@ public class StateChase : State<Enemy> {
     }
 
     public override void Execute(Enemy enemy) {
-        if (enemy.target == null || enemy.target.IsDead()) {
+        if (enemy.target == null || enemy.target.dead) {
             enemy.SwitchToState(StateSearch.instance);
             return;
         }

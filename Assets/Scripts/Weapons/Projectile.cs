@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour {
     public TrailRenderer[] trailRenders;
 
     private int damage;
+    private IDamageSource source;
     private LayerMask targetMask;
 
     void OnEnable() {
@@ -17,6 +18,7 @@ public class Projectile : MonoBehaviour {
             trailRenders[i].Clear();
         }
 
+        // Check to see if we've spawned in a wall or enemy
         Collider[] initalCollisions = Physics.OverlapSphere(transform.position, predictionDistance, targetMask, QueryTriggerInteraction.Collide);
         if (initalCollisions.Length > 0) {
             OnCollide(initalCollisions[0], transform.position);
@@ -31,8 +33,9 @@ public class Projectile : MonoBehaviour {
         }
     }
 
-    public void Initalize(int damage, float distance, LayerMask targetMask) {
+    public void Initalize(IDamageSource source, int damage, float distance, LayerMask targetMask) {
         this.damage = damage;
+        this.source = source;
         this.targetMask = targetMask;
 
         float destroyTime = distance / speed;
@@ -58,7 +61,7 @@ public class Projectile : MonoBehaviour {
         IDamageable damageable = collider.GetComponent<IDamageable>();
 
         if (damageable != null) {
-            damageable.Damage(damage, point, transform.forward);
+            damageable.Damage(source, damage, point, transform.forward);
         }
 
         Die();

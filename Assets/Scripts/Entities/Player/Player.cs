@@ -9,17 +9,16 @@ public class Player : LivingEntity {
 
     [Header("Movement")]
     public Vector3 velocity;
-    public float moveSpeed = 5.0f;
 
     [Header("Weapons")]
     public LayerMask targetMask;
     public Transform[] hands;
     public Weapon[] weapons;
 
-    public delegate void PlayerDamageEvent(Player player, int damage, int health, int healthRemaining);
+    public delegate void PlayerDamageEvent(Player player, IDamageSource source, int damage, int health, int healthRemaining);
     public static event PlayerDamageEvent OnPlayerDamage = delegate { };
 
-    public delegate void PlayerDeathEvent(Player player);
+    public delegate void PlayerDeathEvent(Player player, IDamageSource source);
     public static event PlayerDeathEvent OnPlayerDeath = delegate { };
 
     public void Initalize(User user) {
@@ -32,6 +31,10 @@ public class Player : LivingEntity {
         }
     }
 
+    public void Initalize(CharacterData data) {
+        base.Initalize(data.GetBase());
+    }
+
     public User GetUser() {
         return user;
     }
@@ -41,16 +44,16 @@ public class Player : LivingEntity {
         dead = false;
     }
 
-    public override void Damage(int damage, Vector3 hitPoint, Vector3 hitDirection) {
-        base.Damage(damage, hitPoint, hitDirection);
+    public override void Damage(IDamageSource source, int damage, Vector3 hitPoint, Vector3 hitDirection) {
+        base.Damage(source, damage, hitPoint, hitDirection);
 
-        OnPlayerDamage(this, damage, health + damage, health);
+        OnPlayerDamage(this, source, damage, health + damage, health);
     }
 
-    public override void Die() {
+    public override void Die(IDamageSource source) {
         gameObject.SetActive(false);
         dead = true;
 
-        OnPlayerDeath(this);
+        OnPlayerDeath(this, source);
     }
 }

@@ -14,7 +14,7 @@ public class StateAttack : State<Enemy> {
 
     public override void Execute(Enemy enemy) {
         // No target found, go search for one
-        if (enemy.target == null || enemy.target.IsDead()) {
+        if (enemy.target == null || enemy.target.dead) {
             enemy.SwitchToState(StateSearch.instance);
             return;
         }

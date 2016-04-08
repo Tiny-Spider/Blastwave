@@ -4,10 +4,11 @@ using System.Collections.Generic;
 
 public class Level : MonoBehaviour {
     public GameCamera userCamera;
+    public WaveManager waveManager;
     public Transform[] spawnPoints;
+
     [HideInInspector]
     public List<Player> players;
-    public WaveManager waveManager;
 
     private GameManager gameManager;
 
@@ -16,13 +17,13 @@ public class Level : MonoBehaviour {
     }
 
     void Start() {
+        // Temp list of spawnpoints
         List<Transform> spawnPoints = new List<Transform>(this.spawnPoints);
 
         foreach (User user in gameManager.users) {
             if (user != null) {
                 Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-                CharacterData character = CharacterManager.GetCharacter(user.characterIndex);
-                Player player = GameObject.Instantiate<Player>(character.prefab);
+                Player player = user.GetCharacter().Initalize();
 
                 player.Initalize(user);
                 player.transform.position = spawnPoint.position;
@@ -32,16 +33,10 @@ public class Level : MonoBehaviour {
             }
         }
         
-        // Puke // (Unity pls update to .NET 4)
+        // Puke (Unity pls update to C# 6)
         userCamera.SetTargets(players.ConvertAll<LivingEntity>(x => (LivingEntity)x));
         //userCamera.SetTargets(players);
 
-        StartCoroutine(Waves());
-    }
-
-    IEnumerator Waves() {
-        yield return new WaitForSeconds(2f);
-
-        waveManager.StartWave(1f);
+        waveManager.StartWaves();
     }
 }

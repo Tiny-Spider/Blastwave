@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: 161c01f04cc8b9d408f68275173a5585
+timeCreated: 1460021334
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Barrel10
+    100002: Box05
+    100004: Distributor1
+    100006: Distributor2
+    100008: Floor
+    100010: Guardpost2
+    100012: Guardpost3
+    100014: Hallway1
+    100016: Hallway2
+    100018: //RootNode
+    100020: Level_Wall_East
+    100022: Level_Wall_North
+    100024: Level_Wall_North001
+    100026: Level_Wall_South
+    100028: Level_Wall_West
+    100030: Object001
+    100032: Object002
+    100034: Object003
+    100036: Object004
+    100038: Object005
+    100040: Object006
+    100042: Object007
+    100044: Object008
+    100046: Oiltank2
+    100048: Pipe1
+    100050: Pipe2
+    100052: Pipe3
+    100054: Pipe4
+    100056: Pipe5
+    100058: Pipe6
+    100060: Pump1
+    100062: Pumpengine002
+    100064: Pumpengine003
+    100066: Pumpengine1
+    100068: Refinery
+    100070: System-room
+    100072: Tank pipes
+    100074: Tank pipes 2
+    100076: Tanktrailer
+    100078: Valveroom
+    400000: Barrel10
+    400002: Box05
+    400004: Distributor1
+    400006: Distributor2
+    400008: Floor
+    400010: Guardpost2
+    400012: Guardpost3
+    400014: Hallway1
+    400016: Hallway2
+    400018: //RootNode
+    400020: Level_Wall_East
+    400022: Level_Wall_North
+    400024: Level_Wall_North001
+    400026: Level_Wall_South
+    400028: Level_Wall_West
+    400030: Object001
+    400032: Object002
+    400034: Object003
+    400036: Object004
+    400038: Object005
+    400040: Object006
+    400042: Object007
+    400044: Object008
+    400046: Oiltank2
+    400048: Pipe1
+    400050: Pipe2
+    400052: Pipe3
+    400054: Pipe4
+    400056: Pipe5
+    400058: Pipe6
+    400060: Pump1
+    400062: Pumpengine002
+    400064: Pumpengine003
+    400066: Pumpengine1
+    400068: Refinery
+    400070: System-room
+    400072: Tank pipes
+    400074: Tank pipes 2
+    400076: Tanktrailer
+    400078: Valveroom
+    2300000: Barrel10
+    2300002: Box05
+    2300004: Distributor1
+    2300006: Distributor2
+    2300008: Floor
+    2300010: Guardpost2
+    2300012: Guardpost3
+    2300014: Hallway1
+    2300016: Hallway2
+    2300018: Level_Wall_East
+    2300020: Level_Wall_North
+    2300022: Level_Wall_North001
+    2300024: Level_Wall_South
+    2300026: Level_Wall_West
+    2300028: Object001
+    2300030: Object002
+    2300032: Object003
+    2300034: Object004
+    2300036: Object005
+    2300038: Object006
+    2300040: Object007
+    2300042: Object008
+    2300044: Oiltank2
+    2300046: Pipe1
+    2300048: Pipe2
+    2300050: Pipe3
+    2300052: Pipe4
+    2300054: Pipe5
+    2300056: Pipe6
+    2300058: Pump1
+    2300060: Pumpengine002
+    2300062: Pumpengine003
+    2300064: Pumpengine1
+    2300066: Refinery
+    2300068: System-room
+    2300070: Tank pipes
+    2300072: Tank pipes 2
+    2300074: Tanktrailer
+    2300076: Valveroom
+    3300000: Barrel10
+    3300002: Box05
+    3300004: Distributor1
+    3300006: Distributor2
+    3300008: Floor
+    3300010: Guardpost2
+    3300012: Guardpost3
+    3300014: Hallway1
+    3300016: Hallway2
+    3300018: Level_Wall_East
+    3300020: Level_Wall_North
+    3300022: Level_Wall_North001
+    3300024: Level_Wall_South
+    3300026: Level_Wall_West
+    3300028: Object001
+    3300030: Object002
+    3300032: Object003
+    3300034: Object004
+    3300036: Object005
+    3300038: Object006
+    3300040: Object007
+    3300042: Object008
+    3300044: Oiltank2
+    3300046: Pipe1
+    3300048: Pipe2
+    3300050: Pipe3
+    3300052: Pipe4
+    3300054: Pipe5
+    3300056: Pipe6
+    3300058: Pump1
+    3300060: Pumpengine002
+    3300062: Pumpengine003
+    3300064: Pumpengine1
+    3300066: Refinery
+    3300068: System-room
+    3300070: Tank pipes
+    3300072: Tank pipes 2
+    3300074: Tanktrailer
+    3300076: Valveroom
+    4300000: Refinery
+    4300002: Pipe4
+    4300004: Oiltank2
+    4300006: Tank pipes
+    4300008: Valveroom
+    4300010: Hallway1
+    4300012: Pipe3
+    4300014: Hallway2
+    4300016: Pipe5
+    4300018: Pumpengine1
+    4300020: Guardpost3
+    4300022: Pipe2
+    4300024: Distributor2
+    4300026: Tanktrailer
+    4300028: Distributor1
+    4300030: Barrel10
+    4300032: Tank pipes 2
+    4300034: Box05
+    4300036: Floor
+    4300038: Pipe6
+    4300040: Pipe1
+    4300042: System-room
+    4300044: Pump1
+    4300046: Guardpost2
+    4300048: Level_Wall_North
+    4300050: Level_Wall_East
+    4300052: Level_Wall_West
+    4300054: Level_Wall_South
+    4300056: Pumpengine002
+    4300058: Pumpengine003
+    4300060: Object001
+    4300062: Object002
+    4300064: Object003
+    4300066: Object004
+    4300068: Object005
+    4300070: Object006
+    4300072: Object007
+    4300074: Level_Wall_North001
+    4300076: Object008
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

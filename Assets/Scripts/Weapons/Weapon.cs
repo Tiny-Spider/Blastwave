@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour {
                 IDamageable damageable = hit.collider.GetComponent<IDamageable>();
 
                 if (damageable != null) {
-                    damageable.Damage(damage, hit.point, transform.forward);
+                    damageable.Damage(attacker, damage, hit.point, transform.forward);
                 }
             }
         }

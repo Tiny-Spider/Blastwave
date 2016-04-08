@@ -12,7 +12,7 @@ public class MenuCharacterDisplayer : MonoBehaviour {
 
     public void SetCharacter(CharacterData character) {
         image.sprite = character.displayImage;
-        title.text = character.displayName;
+        title.text = character.names.displayName;
         description.text = character.description;
     }
 }

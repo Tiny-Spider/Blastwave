@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: 
   prefab: {fileID: 11409714, guid: f5081fbe230d83246a59c411104437f3, type: 2}
+  health: 10
+  maxHealth: 10
+  moveSpeed: 5
+  names:
+    displayName: Player (Sniper)
+    techName: player
   displayImage: {fileID: 0}
-  displayName: Sniper Class
   description: "Sneaky character, quick but weak.\r\n\r\nHealth: 6\r\nSpeed: 9\r\nDamage:
     5\r\nRPM: 30"

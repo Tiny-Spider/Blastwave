@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Name: Rouge
   m_EditorClassIdentifier: 
   prefab: {fileID: 11401488, guid: cd3281b97d3598d4895c0f6fad0040a5, type: 2}
+  health: 10
+  maxHealth: 10
+  moveSpeed: 5
+  names:
+    displayName: Player (Rouge)
+    techName: player
   displayImage: {fileID: 0}
-  displayName: Rouge Class
   description: "Medium health, loads of bullets.\r\n\r\nHealth: 10\r\nSpeed: 7\r\nDamage:
     1x2\r\nRPM: 600x2"

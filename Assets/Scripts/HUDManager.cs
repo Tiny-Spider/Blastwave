@@ -19,9 +19,9 @@ public class HUDManager : MonoBehaviour {
         Player.OnPlayerDeath += OnPlayerDeath;
     }
 
-    void OnPlayerDeath(Player player) {
+    void OnPlayerDeath(Player player, IDamageSource source) {
         foreach (Player _player in level.players) {
-            if (!_player.IsDead()) {
+            if (!_player.dead) {
                 return;
             }
         }

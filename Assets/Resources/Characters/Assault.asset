@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Name: Assault
   m_EditorClassIdentifier: 
   prefab: {fileID: 11460264, guid: 0f8712a275c50a9439bc6e577d01afdf, type: 2}
+  health: 10
+  maxHealth: 10
+  moveSpeed: 5
+  names:
+    displayName: Player (Assault)
+    techName: player
   displayImage: {fileID: 0}
-  displayName: Assault Class
   description: 'Medium stats, decent dps.
 
 

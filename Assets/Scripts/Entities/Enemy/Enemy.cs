@@ -24,6 +24,9 @@ public class Enemy : LivingEntity {
 
     private StateMachine<Enemy> stateMachine;
 
+    public delegate void EnemyDeathEvent(Enemy enemy, IDamageSource source);
+    public static event EnemyDeathEvent OnEnemyDeath = delegate { };
+
     void Awake() {
         weapons = new Weapon[hands.Length];
         stateMachine = new StateMachine<Enemy>(this, StateSearch.instance);
@@ -32,6 +35,10 @@ public class Enemy : LivingEntity {
         pathfinder = GetComponent<NavMeshAgent>();
         pathfinder.updateRotation = false;
 	}
+
+    public void Initalize(EnemyData data) {
+        base.Initalize(data.GetBase());
+    }
 
     void Start() {
         if (!animator) {
@@ -107,7 +114,9 @@ public class Enemy : LivingEntity {
         pathfinder.SetDestination(position);
     }
 
-	public override void Die() {
+	public override void Die(IDamageSource source) {
+        OnEnemyDeath(this, source);
+
         dead = true;
         gameObject.Recycle();
 	}

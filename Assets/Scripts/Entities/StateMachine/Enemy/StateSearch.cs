@@ -18,7 +18,7 @@ public class StateSearch : State<Enemy> {
         float targetDistance = 0;
 
         foreach (Player player in level.players) {
-            if (player == null || player.IsDead()) {
+            if (player == null || player.dead) {
                 continue;
             }
 
